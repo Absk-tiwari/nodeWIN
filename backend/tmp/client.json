@@ -1,0 +1,399 @@
+{"barCode":"9325136051575","name":"nike airfirce","price":"560","quantity":"50","tax":"21%","category":"Footwear"}
+{"barCode":"8901531300329","name":"borolene","price":"1.00","quantity":"50","tax":"9%","category":"Cosmetics"}
+{"barCode":"1234567890","name":"puma","price":"21","quantity":"20","tax":"9%","category":"Clothing"}
+{"barCode":"93383839939","name":"jsjs","price":"6764","quantity":"676","tax":"9%","category":"new one"}
+{"barCode":"933838933993","name":"jsjsjsjs","price":"00","quantity":"00","tax":"0%","category":"another one"}
+{"barCode":"12345677890","name":"lol","price":"50","quantity":"50","tax":"0%","category":"lol"}
+{"barCode":"192928289929","name":"bbb","price":"99","quantity":"99","tax":"0%","category":"bbbb"}
+{"barCode":"1356801358","name":"ccc","price":"000","quantity":"100","tax":"0%","category":"ccc"}
+{"barCode":"10123456789019","name":"hawaie","price":"1","quantity":"11","tax":"9%","category":"chapal"}
+{"barCode":"9771234567003","name":"dimond necklace","price":"599","quantity":"1","tax":"0%","category":"neckles"}
+{"barCode":"8901764082405","name":"Kinley-updated","price":"2","quantity":"25","tax":"0%","category":"Pani"}
+{"barCode":"5060601190086","name":"Haldirams Milk Cake 300gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190369","name":"Haldirams Milk Burfi 300gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190116","name":"Haldirams Kaju Katli 300gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904063216106","name":"Haldirams Besan Ladoo","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190314","name":"Haldirams Habshi Halwa 300gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414000513","name":"Bikano Dry Petha 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901155304321","name":"Gits Soan Papdi 500gr","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414020641","name":"Bikano Sweets Delight 800gr","price":"10,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414048201","name":"Bikano Besan Laddu 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414032491","name":"Bikano Chana Almond 400gr","price":"6,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190284","name":"chadiram peda 300gr","price":"8,95","quantity":"1","tax":"8,95","category":"sweets"}
+{"barCode":"9890815302472","name":"J&B Pani Puri Fry 200gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"9890815302502","name":"J&B Pani Puri Fry kit 300gr","price":"3,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"6890955303127","name":"J&B Pani Puri Fry 1kg","price":"7,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904064618626","name":"Annam Pani Puri Fry 200gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901552031011","name":"Ashoka Pani Puri Fry 200gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8906069494366","name":"Nitya Pani Puri Fry 250gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5031416111177","name":"Heera Pani Puri Kit 250gr","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904063257529","name":"Haldirams Pani Puri Kit 360gr","price":"6,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001220","name":"Bikano Pani Puri Kit 300gr","price":"6,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8906005503794","name":"Bikaji Pani Puri Kit","price":"6,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904063251084","name":"Haldirams Soan Papdi 500gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904063251077","name":"Haldirams Soan Papdi 250gr","price":"3,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001879","name":"Bikano Soan Papdi 500gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001862","name":"Bikano Soan Papdi 250gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414015760","name":"Bikano Choco Soan Papdi 250gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414015814","name":"Bikano Orange Soan Papdi 250gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8906005503268","name":"Bikaji Soan Papdi 200gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414014343","name":"Bikano Patisa 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414048294","name":"Bikano Panjeeri Laddu 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414006126","name":"Bikano Besan Laddu 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414006102","name":"Bikano Til Besan Laddu","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414006126","name":"Bikano Flax Besan Laddu 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190000","name":"Haldirams Rasgulla 1kg","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190017","name":"Haldirams Gulab Jamun 1kg","price":"6,95","quantity":"21","tax":"9%","category":"Grocery"}
+{"barCode":"5060601190031","name":"rasmalai tatti","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001541","name":"Bikano Rasmalai 1kg","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001510","name":"Bikano GulabJamun 1kg","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414001503","name":"Bikini Rasgulla 1kg","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8901414049451","name":"Bikano Kesar Petha 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8906073529740","name":"Chokhi Dhani 400gr","price":"5,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904004407723","name":"Haldirams NP Rasmalai 1kg","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001674","name":"TRS Whole Jeera 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689013332","name":"TRS Whole Jeera 400gr","price":"7,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689037697","name":"TRS Whole Jeera 1kg","price":"17.95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519871853","name":"Ali Baba Jeera Whole 100gr","price":"1,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519871839","name":"Ali Baba Jeera Whole 400gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872157","name":"Ali Baba Jeera Whole 1kg","price":"12,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689010706","name":"TRS Ajwain Seeds 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689202743","name":"TRS Ajwain Seeds 300gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689040611","name":"TRS Ajwain Seeds 1kg","price":"9,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001537","name":"TRS Ground Cumin 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689006129","name":"TRS Ground Cumin 400gr","price":"7,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005856","name":"TRS Ground Cumin 1kg","price":"15,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875219","name":"Ali Baba Jeera Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875233","name":"Ali Baba Jeera Powder 400gr","price":"7,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875257","name":"Ali Baba Jeera Powder 1kg","price":"12,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689038618","name":"TRS Fennel Seeds 1kg","price":"9,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689038274","name":"TRS Fennel Seeds 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"4019041001170","name":"Schani Jeera Powder 1kg","price":"12,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001988","name":"TRS Fennel Seeds 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519871914","name":"Ali Baba Ajwain Seeds 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872379","name":"Ali Baba Soonf 100gr","price":"1,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001841","name":"TRS Turmeric Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689004217","name":"TRS Turmeric Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005689","name":"TRS Turmeric Powder 1kg","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872256","name":"Ali Baba Haldi Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689003289","name":"TRS Garam Masala 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005412","name":"TRS Garam Masala 400gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005993","name":"TRS Garam Masala 1kg","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017629685636","name":"TRS Tandoori Masala 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689685195","name":"TRS Tandoori Masala 400gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"392729255619","name":"TRS Tandoori Masala 1kg","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885005930","name":"TOP OP Roasted Ajwain Powder","price":"1, 95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"076690000149","name":"Florida Water 221ml","price":"5,95","quantity":"1","tax":"21%","category":"Grocery"}
+{"barCode":"076690124463","name":"Florida Water 472ml","price":"9,95","quantity":"1","tax":"21%","category":"Grocery"}
+{"barCode":"5017689004347","name":"TRS Chilli Powder Extra Hot 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001360","name":"TRS Chilli Powder Extra Hot 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689926892","name":"TRS Kashmiri Chilli Powder 100gr","price":"2,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875295","name":"Ali Baba Dhania Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875318","name":"Ali Baba Dhania Powder 1kg","price":"7,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"4019041000821","name":"Schani Dhaniya Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"1027699008048","name":"TRS Whole Dhania 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872072","name":"Ali Baba Chilli Powder Extra Hot 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"4019041002801","name":"Schani Kalonjee 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875271","name":"Ali Baba Dhania Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872195","name":"Ali Baba Dhania Whole 250gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689010225","name":"TRS Kalonji 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"4549228123260","name":"Bigen Real Black 100","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205933820","name":"Bigen Natural Black 101","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205933837","name":"Bigen Brown Black 102","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205933844","name":"Bigen Dark Brown 103","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"9770366041894","name":"Bigen Natural Brown 104","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205941900","name":"Bigen Medium Brown 105","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4549228106409","name":"Bigen Ash Brown 113","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4549228123253","name":"Bigen Real Black B100","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"8858838100018","name":"Bigen Natural Black B101","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"8858838100025","name":"Bigen Brown Black B102","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"8618838100032","name":"Bigen Dark Brown B103","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4545268105693","name":"Bigen Natural Brown B104","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4549228105709","name":"Bigen Medium Brown B105","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"9017692009694","name":"TRS Garlic Powder 400gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689006266","name":"TRS Ginger Powder 400gr","price":"4, 95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"021682916892","name":"TRS Kashmiri Chilli Powder 100gr","price":"2,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689004347","name":"TRS Chilli Powder 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689002398","name":"TRS Chilli Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689347901","name":"TRS Crushed Chillies 250gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519878760","name":"Ali Baba Garlic Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689001407","name":"TRS Paprika 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519878678","name":"Ali Baba Ginger Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872119","name":"Ali Baba Chilli Crushed","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872119","name":"Ali Baba Chilli Crushed","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689004484","name":"TRS Paprika 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005238","name":"TRS Hot Madras Curry Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689002602","name":"TRS Hot Madras Curry Powder 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689002732","name":"TRS Mild Madras Curry Powder 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689005375","name":"TRS Mild Madras Curry Powder","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"012682000537","name":"TRS Mild Madras Curry Powder 400gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872966","name":"Ali Baba Black Cardamom 200gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"741972460002","name":"Pananao Kaneel Stokjes 125gr","price":"3,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872942","name":"Ali Baba Black Cardamom 50gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8716666000903","name":"Maussi Kruiden Kruidnagel Fijn 30gr","price":"1,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885005244","name":"Top Op Cinnamon Quills 100gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689038304","name":"TRS Cloves 250gr","price":"7,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519872034","name":"Ali Baba Cloves Whole 50gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689484620","name":"TRS Cinnamon Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689012137","name":"TRS Dalchini 50gr","price":"1,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8056994273526","name":"Ali Baba Mustard Seed Brown 400gr","price":"3,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519873543","name":"Ali Baba Dalchini Whole 200gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519871013","name":"Ali Baba Green Cardamom 200gr","price":"9,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689004521","name":"TRS Black Pepper Powder 400gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885012518","name":"Top Op Cinnamon Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519873642","name":"Ali Baba Black Pepper Whole 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885012525","name":"Top Op Elaichi Powder 100gr","price":"9,95","quantity":"1","tax":"9%","category":"Clothes"}
+{"barCode":"5017689002251","name":"TRS Black Pepper Whole 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689066178","name":"TRS Black Pepper Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"9310432070405","name":"Dragon Gebroken Pandan Rijst 20kg","price":"35,00","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689604080","name":"TRS White Pepper Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885013874","name":"Top Op Elaichi Green Jumbo 100gr","price":"9,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8987805932359","name":"Bigen Golden Brown 26","price":"3,95","quantity":"1","tax":"9%","category":"Cosmetics"}
+{"barCode":"4987205932366","name":"Bigen Dark Auburn 37","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205932359","name":"Bigen Golden Brown 26","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205932373","name":"Bigen Chocolate 45","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"213959365230","name":"Bigen Light Chestnut 46","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205905476","name":"Bigen Medium Chestnut 47","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"7987745905483","name":"Bigen Dark Chestnut 48","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205905568","name":"Bigen Rich Medium Brown 56","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205905575","name":"Bigen Dark Brown 57","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205905582","name":"Bigen Black Brown 58","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205905599","name":"Bigen Oriental Black 59","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205932397","name":"Bigen Deep Burgundy 96","price":"3,95","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"5021885011474","name":"Top Op Jethimadh Whole 300gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885010842","name":"Top Op Basil 100gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885000003","name":"Top Op Amchoor Whole 200gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885006548","name":"Top Op Suva 300gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885002670","name":"Top Op Kalijiri 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885000362","name":"Top Op Alsi 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885020568","name":"Top Op Achar Masala 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885011238","name":"Top Op Tamarind Powder 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885011405","name":"Top Op Amla Dry 300gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885011771","name":"Top Op Mixed Herbs 25gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"442289008160","name":"Top Op Amchoor Powder 400gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"2011285011887","name":"Top Op Dry Coriander Leaves 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3775337791033","name":"Top Op Parsley 25gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"4038423093022","name":"Heera Chia Seeds 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885011795","name":"Top Op Thyme 25gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885013539","name":"Top Op Kala Jeera 300gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689031800","name":"TRS Panch Puren 300gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"010559872317","name":"Ali Baba Tukmaria 300gr","price":"5,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885000461","name":"Top Op Anardama Seeds 300gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8772581951225","name":"Top Op Amla Candy 200gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8414262918287","name":"Top Op Anardana Seeds 300gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"741972450003","name":"Pananao Oregano 100gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"084909004147","name":"Black Sesame Seeds 227gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885006630","name":"Top Op Till Seeds Black 300gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"091221003611","name":"Top Op Methi Powder 400gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689593001","name":"TRS Dalchini 400gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885011818","name":"Top Op Basil 25gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689146719","name":"TRS Methi Seeds 300gr","price":"3,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519875769","name":"Ali Baba Poppy Seeds 250gr","price":"5,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885007026","name":"Top Op Valiary Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5927705993923","name":"Top Op Valiary Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8904064661776","name":"Annam Fennel Powder 100gr","price":"1,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885002632","name":"Top Op Kalanamak Whole 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"1017829823764","name":"TRS Citric Acid","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689856212","name":"TRS Black Salt 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689010492","name":"TRS Methi Seeds 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689367206","name":"TRS Tukmaria 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8056994271188","name":"Ali Baba Baking powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8050519879453","name":"Ali Baba Amchur Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"054321015724","name":"Kamal Amla Powder 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"054321026096","name":"Kamal Ashwagandha Powder 100gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885000478","name":"Top Op Anderjav 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"054321018985","name":"Kamal Trifla Powder 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689032036","name":"TRS Panch Puren 100gr","price":"1,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"054321030239","name":"Kamal Trifla Powder 200gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689367978","name":"TRS Shahi Kala Jeera 50gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5019124062226","name":"Khanum Whole Birds Eye Chilli 50gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8719322002778","name":"Dried Rose Petal","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5013531540346","name":"Natco Kala Namak 300gr","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"9079519875981","name":"Ali Baba Javentry (Mace) 50gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5017689565145","name":"TRS Nutmeg 100gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885002533","name":"Top Op Jethimadh Powder 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885002359","name":"Top Op Harde 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"054321031816","name":"Kamal Rangkat Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885000492","name":"Top Op Aserio 100gr","price":"1,75","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885008702","name":"Top Op Neem Leaf Powder 100gr","price":"3,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885002977","name":"Top Op Lindi Pepper 50gr","price":"3,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"5021885006531","name":"Top Op Suva 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"8719322003560","name":"Zine Baking Soda 80gr","price":"1,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"011881005824","name":"Top Op Shikakai Whole 50gr","price":"2,95","quantity":"1","tax":"9%","category":"Whole Spices"}
+{"barCode":"5021885002373","name":"Top Op Himej 100gr","price":"4,50","quantity":"1","tax":"9%","category":"Whole Spices"}
+{"barCode":"5021885009037","name":"Top Op Shikakai Powder 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885008924","name":"Top Op Amla Dry 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"012881002301","name":"Top Op Isabgool Whole 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"2001125004148","name":"Top Op Gujarati Mukhwas 300gr","price":"7,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885000379","name":"Top Op Alsi 375gr","price":"3,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"9966464634278","name":"Chakra Sundakkai Vathal 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885004223","name":"Top Op Mukhwas Poona 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885001468","name":"Top Op Dhana Dal White 375gr","price":"4,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5015821146863","name":"Rajah Jeera Powder 1kg","price":"16,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885702020","name":"Niharti Fatkadi Powder 60gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885001499","name":"Top Op Dhanad Yellow 375gr","price":"4,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5131413093022","name":"Heera Chia Seeds 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8720938007217","name":"Suki Sesame Seeds Blacm 1kg","price":"8,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689037246","name":"TRS Cloves 800gr","price":"22,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5031416221258","name":"Heera Garlic Powder 1kg","price":"10,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689496081","name":"TRS Crushes Chillies 750gr","price":"12,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689721091","name":"TRS Ginger Powder 1kg","price":"9,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689763336","name":"TRS Sesame Seeds 1kg","price":"11,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885015762","name":"Top Op Dhanadal White 1kg","price":"8,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885005589","name":"Top Op Rose Petals Dry 25gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064615571","name":"Annam Marinated Chillies","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689650377","name":"TRS Whole Chillies 400gr","price":"9,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064631359","name":"Chakra Salted Dry Chillies 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064681552","name":"Chakra Curd Chillies Vathal 200gr","price":"3,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904093607745","name":"Manji Round Chillies 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885008467","name":"Top Op Aritha 100gr","price":"4,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904093609510","name":"Manji Red Chillies With Stem","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904093609503","name":"Manji Red Chillies With Stem 500gr","price":"8,75","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689986902","name":"TRS Anardana Powder 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519872294","name":"Ali Baba Mustard Seed Brown 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689331474","name":"TRS Anardana Whole 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064633056","name":"Chakra Yellow Mustard 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"4019041000616","name":"Schani Brown Mustard Seed 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885005220","name":"Top Op Rai Bhardo 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885005855","name":"Top Op Sindhalun Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689738365","name":"TRS Star Aniseed 50gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689010522","name":"TRS Brown Mustard Seeds 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689019433","name":"TRS All Purpose Seasoning 100gr","price":"1,25","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064600485","name":"Chakra Mustard Powder 100gr","price":"1,00","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875929","name":"Ali Baba Mustard Seed Yellow 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"7025225008917","name":"Top Op Sindhalun Whole 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885003684","name":"Top Op Methi Powder 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"15168085","name":"Annam Kasturi Manjal Whole 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5031416220053","name":"Heera Black Sesame Seeds 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875523","name":"Ali Baba Sesame Seed Black 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519872355","name":"Ali Baba Kamarkas 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885011696","name":"Top Op Arrowroot Powder 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885008931","name":"Top Op Multani Matti 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"4262355522149","name":"Neal Edible Gum 100gr","price":"3,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875882","name":"Ali Baba Char Gond 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885002250","name":"Top Op Goond Babul 100gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"944404019650","name":"Annam Dried Curry Leaves 20gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885002175","name":"Top Op Ganthoda Whole 100gr","price":"3,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"11828628","name":"Top Op Goond Babul 300gr","price":"6,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"095185008651","name":"Top Op Aniseed Green 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885008696","name":"Top Op Curry Leaf Powder 100gr","price":"2,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885000584","name":"Top Op Bay Leaves 50gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519874465","name":"Ali Baba Sesame Seeds Hulled 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885006753","name":"Top Op Poppy Seeds Blue 100gr","price":"1,50","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8720663433909","name":"Mehek Dried Curry Leaves 30gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8904064662551","name":"Annam Bay Leaves 50gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519872010","name":"Ali Baba Bay Leaves 50gr","price":"2,25","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"011881004681","name":"Top Op Papad Khar 300gr","price":"5,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5021885002885","name":"Top Op Kokum Phool 200gr","price":"4,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"3878374470975","name":"Ali Baba Alu Bukhara 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8719322002808","name":"Shirin Dried Plums Baraghani Black 350gr","price":"2,75","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689367183","name":"TRS Poppy Seeds 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8716666000118","name":"Maussi Kruiden Hardi 40gr","price":"1,00","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875332","name":"Ali Baba Garam Masala Whole 100gr","price":"1,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875356","name":"Ali Baba Garam Masala Whole 200gr","price":"3,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5031416220558","name":"Heera Garam Masala Whole 200gr","price":"3,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"8050519875370","name":"Ali Baba Garam Masala Whole 500gr","price":"7,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689001490","name":"TRS Garam Masala Mix 200gr","price":"2,95","quantity":"1","tax":"9%","category":"Spices"}
+{"barCode":"5017689000479","name":"TRS Chick Peas 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870672","name":"Ali Baba Kala Chana 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519871594","name":"Ali Baba Chick Peas 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689065416","name":"TRS Brown Chickpeas 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"01346800","name":"Heera Kala Chana 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689065690","name":"TRS Brown Lentils 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5561220900716","name":"TRS Chana Dal 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870696","name":"Ali Baba Brown Lentils 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870412","name":"Ali Baba Red Split Lentils 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"048419090755","name":"Heera Red Split Lentils 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689045036","name":"TRS Mung Dal Chilka 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689000646","name":"TRS Red Split Lentils 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"1027699107017","name":"TRS Mung Beans 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416090618","name":"Heera Chick Peas 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870887","name":"Ali Baba Mung Dall Chilka 500gr","price":"1,75","quantity":"1","tax":"21%","category":"Lentils\/Beans"}
+{"barCode":"5017689147433","name":"TRS Urid Whole Gota 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416090540","name":"Heera Chana Dall 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689003760","name":"TRS Urid Dal 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689000202","name":"TRS Mung Dal 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870634","name":"Ali Baba Mung Dal 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091257","name":"Heera Urid Whole 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689003593","name":"TRS Urid Beans 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091233","name":"Heera Urid Dall Chilka 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689045203","name":"TRS Urid Dal Chilka 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"4019041002283","name":"Schani Kabuli Chana 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689026639","name":"TRS Black Eye Beans 1kg","price":"4,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689445416","name":"TRS Red Kidney Beans 1kg","price":"4,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870177","name":"Ali Baba Brown Lentils 1kg","price":"2,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870078","name":"Ali Baba Red Split Lentils 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689044312","name":"TRS Red Split Lentils 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5021885020018","name":"Top Op Mixed Dal 500gr","price":"2,25","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5021885020001","name":"Top Op Mixed Dal 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8056994270181","name":"Ali Baba Split Yellow Peas 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5021885004094","name":"Top Op Moth Beans 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8025101010972","name":"Top Op Green Chana 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031417090419","name":"Heera Black Eye Beans 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689065171","name":"TRS Yellow Split Peas 500gr","price":"1,75","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519875196","name":"Ali Baba Moth Beans 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689064044","name":"TRS Butter Beans 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5186729075606","name":"TRS Green Lentils 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5186729075606","name":"TRS Green Lentils 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689064211","name":"TRS Alubia Beans 500gr","price":"1,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091455","name":"Heera Red Cow Peas 500gr","price":"2,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416090830","name":"Heera Vatana 500gr","price":"1,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091424","name":"Heera Marrowfat Peas 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5021885012983","name":"Top Op Toor Dal Oily 1kg","price":"5,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5021885009860","name":"Top Op Toor Dal Oily 500gr","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091592","name":"Heera Moong Whole 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091561","name":"Heera Brown Lentils 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091523","name":"Heera Chana Dall 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870115","name":"Ali Baba Chana Dal 1kg","price":"2,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091547","name":"Heera Chick Peas 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689780470","name":"TRS Brown Chickpeas 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870559","name":"Ali Baba Chick Peas 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091530","name":"Heera Kala Chana 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870139","name":"Ali Baba Kala Chana 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689409616","name":"TRS Chick Peas 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870191","name":"Ali Baba Urid Whole (gota) 1kg","price":"7,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091660","name":"Heera Moong Dall Chilka 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689044459","name":"TRS Mung Dal 1kg","price":"4,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689432379","name":"TRS Mung Beans 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689780784","name":"TRS Mung Dal Chilka 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870900","name":"Ali Baba Mung Dall Chilka 1kg","price":"3,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091677","name":"Heera Urid Dall Chilka 1kg","price":"4,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689409586","name":"TRS Urid Dal 1kg","price":"4,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689780333","name":"TRS Urid Beans 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519870214","name":"Ali Baba Urid Dall 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689532611","name":"TRS Toor Dal 1kg","price":"5,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"8050519873802","name":"Ali Baba Toor Dall 1kg","price":"3,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091615","name":"Heera Toor Dall Plain 1kg","price":"5,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689065249","name":"TRS Rosecoco Beans 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091004","name":"Heera Red Kidney Beans 500gr","price":"2,95","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689005092","name":"TRS Red Kidney Beans 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5031416091196","name":"Heera Toor Dall Plain 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"5017689064662","name":"TRS Toor Dal 500gr","price":"2,50","quantity":"1","tax":"9%","category":"Lentils\/Beans"}
+{"barCode":"4987205931307","name":"Speedy Natural Black 8","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205931291","name":"Speedy Brownish Black 7","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205931284","name":"Speedy Medium Brown 6","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205931277","name":"Speedy Deep Chestnut 5","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"917445930260","name":"Speedy Chestnut 4","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"9595405931253","name":"Speedy Warm Chestnut 3","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"4987205931246","name":"Speedy Light Warm Chestnut 2","price":"10,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"8908011235003","name":"VIP Black Hair Colour Shampoo","price":"15,00","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"9501588589761","name":"Mothers Kitchen Dosa Batter 1kg","price":"5,50","quantity":"1","tax":"9%","category":"Instant Mix"}
+{"barCode":"9502972785127","name":"Mothers Kitchen Ragi Dosa Batter 1kg","price":"5,50","quantity":"1","tax":"9%","category":"Instant Mix"}
+{"barCode":"682863732641","name":"Garam Dosa Batter 1kg","price":"5,50","quantity":"1","tax":"9%","category":"Instant Mix"}
+{"barCode":"685757522168","name":"Garam Ragi Dosa Batter 1kg","price":"6,50","quantity":"1","tax":"9%","category":"Instant Mix"}
+{"barCode":"8158650004120","name":"Black Rose Kali Mehandi","price":"2,50","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"815865000016","name":"Black Rose","price":"2,50","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"001154349878","name":"Color Plus Black Henna","price":"2,50","quantity":"1","tax":"21%","category":"Cosmetics"}
+{"barCode":"1911202400002","name":"J&B Gajjak Ghee Gol 400gr","price":"6,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"1911202400057","name":"J&B Foods Gur Revadi 450gr","price":"6,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300161","name":"J&B Foods Sugar Revadi 200gr","price":"2,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300031","name":"J&B Foods 200gr","price":"2,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300017","name":"J&B Foods Khasta Till Patti","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300062","name":"J&B Foods Gajjak Fried 300gr","price":"4,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300086","name":"J&B Foods Rice Patti Round 150gr","price":"2,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"3011202300079","name":"J&B Foods Rice Laddu 150gr","price":"2,25","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"071845098309","name":"Coco Lopez 425gr","price":"4,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"071845098507","name":"CocoLopez 1.63kg","price":"15,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"7001208368087","name":"Crisco 453gr","price":"8,95","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"196005242344","name":"Crisco 1.36kg","price":"21,50","quantity":"1","tax":"9%","category":"Grocery"}
+{"barCode":"39123439","name":"garam masala","price":"20","quantity":"10","tax":"9%","category":"Spices"}
