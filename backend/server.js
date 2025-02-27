@@ -42,13 +42,6 @@ app.use("/config", require("./routes/config"));
 
 app.get("/", (r, res) => res.send("Something went wrong!"));
 
-app.get('print', async(req,res) => {
-    const print = printer.USB()
-    console.log(print);
-})
-
-// const printer = new escpos.Printer('USB001');
-// app.listen(port);
 let server
 function start(){
   server = app.listen(port)

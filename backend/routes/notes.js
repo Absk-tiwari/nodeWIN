@@ -23,7 +23,7 @@ const upload = multer({
     limits: { fileSize: 2 * 1024 * 1024 }, // 2MB limit
     fileFilter: (req, file, cb) => {
       // Validate file type (optional)
-      const fileTypes = /jpeg|jpg|png/;
+      const fileTypes = /jpeg|jpg|png|webp/;
       const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
       const mimetype = fileTypes.test(file.mimetype);
   
@@ -74,6 +74,12 @@ router.post('/create', upload.single('image'), async(req, res) =>{
 
 router.get('/remove/:id', fetchuser, async(req, res) =>{
     try { 
+        const note = await Note.query().findById(req.params.id);
+        try {
+            if(fs.existsSync(path.join(__dirname, '../tmp/'+note.image))){
+                fs.unlinkSync(path.join(__dirname, '../tmp/'+note.image))
+            }
+        } catch (er) {}
         const noteDeleted = await Note.query().deleteById(req.params.id);
         if(noteDeleted) {
             return res.json({status:true, noteDeleted}); 

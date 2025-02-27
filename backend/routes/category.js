@@ -11,7 +11,20 @@ let output = { status : true }
   
 router.get('/', async (req,res) => {
     try {  
-        let categories = await Category.query();
+        let categories = await Category.query()
+        .orderByRaw(`
+            CASE 
+                WHEN name LIKE 'veg%' THEN 1
+                WHEN name LIKE 'Rice%' THEN 2
+                WHEN name LIKE 'Floo%' THEN 3
+                WHEN name LIKE 'Atta%' THEN 3
+                WHEN name LIKE 'Groce%' THEN 4
+                WHEN name LIKE 'Spice%' THEN 5
+                WHEN name LIKE 'Oil%' THEN 6
+                WHEN name LIKE 'Ghee%' THEN 7
+            ELSE 8
+            END
+        `);
         return res.json({status:true, categories });
     } catch (e) {
         console.log("exception occured: ",e)

@@ -1,5 +1,3 @@
-const knex = require('knex');
-
 exports.up = async function (knex) {
     await knex.schema.dropTableIfExists('reports');
     await knex.schema.createTable('reports', (table) => {

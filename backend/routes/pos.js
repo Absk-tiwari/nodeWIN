@@ -7,7 +7,7 @@ const router = express.Router();
 const fetchuser= require('../middlewares/loggedIn');
 const { getCurrentDate } = require("../utils");
 
-router.get('/products/:img', fetchuser , async(req, res) => {
+router.get('/products/:img',  async(req, res) => {
 
     let products;
     const cols = [
@@ -54,7 +54,7 @@ router.post('/opening-day-cash-amount', async(req, res) => {
     {
         let created = await CashRegister.query().insert({
             opening_cash: req.body.cash,
-            closing_cash: '0',
+            closing_cash: parseFloat(req.body.cash.replace('€ ','')),
             date: getCurrentDate(),
             status: true,
             user_id: req.body.myID

@@ -14,7 +14,7 @@ const { format } = require('date-fns');
 const path = require('path');
 const pdf = require('html-pdf');
 const fs = require('fs');
-const { generatePdf, getCurrentDate } = require('../utils');
+const { generatePdf } = require('../utils');
 const e = require("express");
 
 const imgPath = path.join(__dirname,'../client/build/static/media/pos.5e6faa254498748a41be.png')
@@ -26,7 +26,7 @@ let error = { status : false, message:'Something went wrong!' }
 router.get('/', fetchuser , async(req, res) => {
 
     const orders = Order.query()
-    .withGraphFetched('[customer(selectName), cashier(selectName)]')
+    .withGraphFetched('[customer(selectName), cashier(selectName), session]')
     .modifiers({
       selectName(build) {
         build.select('id', 'name');
@@ -47,7 +47,7 @@ router.post('/create', fetchuser, async(req, res) =>
 { 
     try {
         // Create the order
-        const notifications = []
+        const notifications = [];
         const order = await Order.query().insert({
             session_id: req.body.session_id,
             amount: req.body.amount,
@@ -56,38 +56,65 @@ router.post('/create', fetchuser, async(req, res) =>
             payment_mode: req.body.payment_mode,
             transaction_type: req.body.transaction_type,
             cashier_id: req.body.myID,
-            created_at: new Date().toISOString()
+            created_at: new Date().toISOString(),
+            cash_register_id: req.body.cash_register_id
         });
-        console.log(format(new Date().toISOString(), 'yyyy-MM-dd'))
+        
         if (!order) {
             throw new Error('Error creating order');
         }
 
         if (req.body.sessionData) {
             // Create the cashier session
+            let modes = req.body.modes
+            if((req.body.payment_mode).indexOf(',') !==-1 ) {
+                modes = {...req.body.sessionData, modes }
+            } else {
+                modes = req.body.sessionData
+            }
             await CashierSession.query().insert({
                 order_id: order.id,
                 cashier_id: req.body.myID,
                 session_id: req.body.session_id,
                 cash_register_id: req.body.cash_register_id,
-                data: req.body.sessionData,
+                data: modes,
             });
 
+            if(order.transaction_type==='credit') {
+                await CashRegister.query().findById( req.body.cash_register_id ).patch({
+                    closing_cash: CashRegister.raw(`closing_cash + ?`, [ req.body.cashForDrawer ])
+                });
+            } else {
+                await CashRegister.query().findById( req.body.cash_register_id ).patch({
+                    closing_cash: CashRegister.raw(`closing_cash - ?`, [ req.body.amount ])
+                });
+            }
             const sessionData = req.body.sessionData;
             const minStock = await Setting.query().where('user_id', req.body.myID )
             .where('key', 'STOCK_ALERT')
             .first();
 
+            const INVENTORY_IS = await Setting.query().where('user_id', req.body.myID)
+            .where('key','INVENTORY_IS')
+            .first();
             for (const [productId, stock] of Object.entries(sessionData.quantity)) {
                 
                 if (productId === 'quick') continue;
-                // decrement product stock
-                const product = await Product.query().findById(productId).patch({
-                    quantity: Product.raw('quantity - ?', [stock]),
-                });
+                // decrement product stock if the inventory is on 
+                if(!INVENTORY_IS || INVENTORY_IS.value ==='true') { // INVENTORY_IS.value == true
+                    if(order.transaction_type==='credit') {
+                        await Product.query().findById(productId).patch({
+                            quantity: Product.raw('quantity - ?', [stock]),
+                        });
+                    } else {
+                        await Product.query().findById(productId).patch({
+                            quantity: Product.raw('quantity + ?', [stock]),
+                        });
+                    }
+                }
 
                 // Check stock alert
-                if (minStock) {
+                if (minStock && (!INVENTORY_IS || INVENTORY_IS.value ==='true')) { // iff INVENTORY IS ON
                     const prod = await Product.query()
                         .where('id', productId )
                         .select('quantity', 'name')
@@ -96,7 +123,7 @@ router.post('/create', fetchuser, async(req, res) =>
                     if ( prod.quantity < minStock.value ) {
                         try {
                             let inserted = await Notification.query().insertAndFetch({
-                                content: `Stock named ${prod.name} is running out!`,
+                                content: `Stock ${prod.name} is running out!`,
                                 created_at: new Date().toISOString(),
                                 user_id: req.body.myID
                             });
@@ -128,8 +155,6 @@ router.get('/view-order/:id', fetchuser, async(req, res) =>{
         let session = await CashierSession.query().where('session_id', order.session_id ).where('order_id', order.id ).first().select('data');
         let data = JSON.parse(session.data)
         const products = await Product.query().whereIn( 'id', data.products );
-        console.log(products)
-        // return res.json({products});
         const pairs = {};
         products.forEach( product => {
             pairs[product.id] = product;
@@ -192,12 +217,12 @@ router.get(`/last-order`, async(req,res) => {
     }
 })
 
-router.get(`/x-report`, fetchuser, async(req,res) => {
+router.post(`/x-report`, fetchuser, async(req,res) => {
     try 
     {
         const payload = req.body;
-        const {status, message} = await generateReport({...payload, type:'X'})
-        res.json({ status, message });
+        const {status, message, html} = await generateReport({...payload, type:'X'})
+        res.json({ status, message, html });
     } catch (error) {
         res.json({status:false, message:error.message});
     }
@@ -208,8 +233,6 @@ router.post(`/z-report`, fetchuser, async(req,res) => {
         const payload = req.body;
         const {status, message, html} = await generateReport({...payload, type:'Z'})
         if(status){
-            // todo update CashRegister modal status=false where id = payload.register_id
-            // 
             if(payload.register_id) {
                 await CashRegister.query().where('id', payload.register_id).patch({
                     status:false
@@ -223,92 +246,101 @@ router.post(`/z-report`, fetchuser, async(req,res) => {
     }    
 })
 
-
 async function generateReport(payload) {
 
-    let totalProducts = 0, total = 0, returns = 0, tax = 0, cash = 0, card = 0;
+    let totalProducts = 0, total = 0, returns = 0, tax = 0, cash = 0, card = 0, account = 0;
     let customers = [];
     let categories = { 'Others': 0 };
     let Rtype = payload.type;
 
     let orders;
     if (payload.today) {
+        const today = (new Date().toISOString()).split('T')[0];
         if(payload.register_id){
             orders = await Order.query()
                 .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-                .where(raw('DATE(created_at)'), (new Date().toISOString()).split('T')[0])
+                .where(raw('STRFTIME("%Y-%m-%d",created_at)'), today)
                 .where('cs.cash_register_id', payload.register_id)
                 .select('*');
         } else {
             orders = await Order.query()
                 .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-                .where(raw('DATE(created_at)'), (new Date().toISOString()).split('T')[0])
+                .where(raw('STRFTIME("%Y-%m-%d",created_at)'), today)
                 .select('*');
         }
     } else {
         orders = await Order.query()
             .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-            .whereBetween(raw('DATE(created_at)'), [payload.from, payload.to])
+            .whereBetween(raw('STRFTIME("%Y-%m-d%",created_at)'), [payload.from, payload.to ? payload.to: today])
             .select('*');
     }
-    
     let taxes = {}, qt = {};
-    // all below calculations just to obtain the data;
     for (const order of orders) {
         let orderData = JSON.parse(order.data);
         if (!customers.includes(order.customer_id) && order.customer_id) customers.push(order.customer_id);
-        total += orderData.total;
-
-        let products = Array.from(new Set(orderData.products));
-        let QT = orderData.quantity;
-        let quickProduct = orderData.otherAmount || null;
-
-        for (const id of products) {
-            if (id === 'quick') {
-                categories['Others'] += quickProduct;
-                qt['Others'] = (qt['Others'] || 0) + QT[id];
-                continue;
+        if(order.transaction_type==='credit') 
+        {
+            let products = Array.from(new Set(orderData.products));
+            total += orderData.total;
+            let QT = orderData.quantity;
+            let quickProduct = orderData.otherAmount || null;
+            const sPrice = orderData.price || null
+    
+            for (const id of products) {
+                if (id === 'quick') {
+                    categories['Others'] += parseFloat(quickProduct);
+                    qt['Others'] = (parseFloat(qt['Others']) || 0) + QT[id];
+                    continue;
+                }
+    
+                let product = await Product.query()
+                    .withGraphFetched('category')
+                    .findById(id)
+                    .select('category_id', 'price', 'tax');
+    
+                if (product?.tax) {
+                    let [value, type] = product.tax.split(' ');
+                    if (!taxes[type??'Other']) taxes[type??'Other'] = value;
+                }
+    
+                if (!product?.category) {
+                    categories['Others'] += product.price * QT[id];
+                    qt['Others'] = (parseFloat(qt['Others']) || 0) + QT[id];
+                } else {
+                    categories[product.category.name] = (categories[product.category.name] || 0) + (sPrice?.[id]??product.price * QT[id]);
+                    qt[product.category.name] = (parseInt(qt[product.category.name]) || 0 ) + QT[id];
+                }
             }
-
-            let product = await Product.query()
-                .withGraphFetched('category')
-                .findById(id)
-                .select('category_id', 'price', 'tax');
-
-            if (product?.tax) {
-                let [value, type] = product.tax.split(' ');
-                if (!taxes[type??'Other']) taxes[type??'Other'] = value;
-            }
-
-            if (!product?.category) {
-                categories['Others'] += product.price * QT[id];
-                qt['Others'] = (qt['Others'] || 0) + QT[id];
+    
+            totalProducts += Object.values(QT).reduce((sum, qty) => sum + parseInt(qty), 0);
+    
+            let finalTax = await Product.query()
+                .whereIn('id', products)
+                .select(['tax','price']);
+    
+            let thisTax = finalTax.reduce((sum, item) => sum + (parseFloat(item.tax) / 100 * parseFloat(item.price)), 0);
+            if(!isNaN(thisTax)) tax += thisTax;
+            if (order.payment_mode === 'Cash') {
+                cash += orderData.total;
+            } else if (order.payment_mode === 'Card') {
+                card += orderData.total;
+            } else if(order.payment_mode === 'Account') {
+                account+= orderData.total;
             } else {
-                categories[product.category.name] = (categories[product.category.name] || 0) + (product.price * QT[id]);
-                qt[product.category.name] = (qt[product.category.name] || 0) + QT[id];
+                if(orderData.modes) {
+                    cash+= parseFloat(orderData.modes.Cash).toFixed(2)
+                    card+= parseFloat(orderData.modes.Card).toFixed(2)
+                    account+= parseFloat(orderData.modes.Account).toFixed(2)
+                }
             }
+        } else {
+            returns += orderData.total
         }
 
-        totalProducts += Object.values(QT).reduce((sum, qty) => sum + qty, 0);
-
-        let finalTax = await Product.query()
-            .whereIn('id', products)
-            .select(raw('tax / 100 * price as final'));
-
-        tax += finalTax.reduce((sum, item) => sum + parseFloat(item.final), 0);
-
-        if (order.payment_mode === 'Cash') {
-            cash += orderData.total;
-        } else if (order.payment_mode === 'Card') {
-            card += orderData.total;
-        }
-
-        if (order.transaction_type !== 'credit') {
-            returns += 1;
-        }
     }
     let me = await User.query().where('id', payload.myID ).first();
     let registerCash = await CashRegister.query().where('id', payload.register_id??0 ).first();
+    if(!registerCash) throw new Error("Z-report generated already!")
     // now we have the meta-data
     let data = {
         total_products: totalProducts,
@@ -318,6 +350,7 @@ async function generateReport(payload) {
         total_amount: parseFloat(total),
         cash: parseFloat(cash),
         card: parseFloat(card),
+        account: parseFloat(account),
         discounts: 0.00,
         number_of_transactions: orders.length,
         categories,
@@ -330,7 +363,7 @@ async function generateReport(payload) {
         b64,
         register:{
             open: registerCash?.opening_cash??0 ,
-            close: payload.currency+ payload.closing_cash??0
+            close: payload.currency+ registerCash.closing_cash??0
         }
     };
 
@@ -344,7 +377,7 @@ async function generateReport(payload) {
             .select(raw("DATE(date) as date"))
             .first();
 
-        if (alreadyGen && alreadyGen.date === format(new Date(), 'yyyy-MM-dd')) {
+        if (alreadyGen && alreadyGen.date === (new Date().toISOString()).split('T')[0]) {
             return { message: 'Z-report already created for the day!', status: false };
         }
 
@@ -363,7 +396,7 @@ async function generateReport(payload) {
 
         await Report.query().insert({
             path,
-            date: format(new Date(), 'yyyy-MM-dd')
+            date: new Date().toISOString()
         });
         
     } 
@@ -371,10 +404,32 @@ async function generateReport(payload) {
     return { 
         status: true,  
         html: view, 
-        message: Rtype==='Z'? 'Z-report generated! All sessions are reset now':"X-report generated!"
+        message: Rtype==='Z'? 'Z-report generated! Sessions are reset':"X-report generated!"
     };
     
 }
 
+router.get('/reports', async(req,res) => {
+    try {
+        const reports = await Report.query().orderBy('id','desc');
+        return res.json({status:true, reports})
+    } catch (error) {
+        return res.json({status:false, reports:[]})
+    }
+})
 
+router.get('/remove-report/:id', async(req,res)=> {
+    try {
+        const report = await Report.query().findById(req.params.id);
+        try {
+            if(fs.existsSync(path.join(__dirname,'../tmp/'+report.path))) {
+                fs.unlinkSync(path.join(__dirname,'../tmp/'+report.path))
+            }
+        } catch (error) {throw new Error("Failed to remove the file:"+error.message)}
+        await Report.query().deleteById(req.params.id)
+        return res.json({status:true, message:"Report rempoved!"})
+    } catch (error) {
+        
+    }
+})
 module.exports=router 

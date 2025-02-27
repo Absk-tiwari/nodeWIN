@@ -9,7 +9,7 @@ class Order extends Model {
     static get relationMappings() {
         const Customer = require('./Customer');
         const CashierSession = require('./CashierSession');
-        const User = require('./user');
+        const User = require('./User');
 
         return {
             customer: {
@@ -32,8 +32,8 @@ class Order extends Model {
                 relation: Model.HasOneRelation,
                 modelClass: CashierSession,
                 join: {
-                    from: 'orders.session_id',
-                    to: 'cashier_sessions.id'
+                    from: 'orders.cash_register_id',
+                    to: 'cashier_sessions.cash_register_id'
                 }
             },
         };
