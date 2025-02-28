@@ -31,7 +31,7 @@ app.on('ready', () =>
     });
     
     mainWindow.loadURL('http://localhost:5100');
-    mainWindow.webContents.once('did-finish-load', () => {mainWindow.show();mainWindow.maximize()});
+    mainWindow.webContents.once('did-finish-load', () => {mainWindow.show();mainWindow.maximize();mainWindow.setFullScreen(true);});
     mainWindow.on('closed', () => {
         mainWindow = null;        
         if (backendProcess) backendProcess.kill();
@@ -67,6 +67,11 @@ ipcMain.on('reload', (event, content) => {
     windows.forEach( win => {
         if(win) win.webContents.send('data-received', {reload:true})
     })
+})
+
+ipcMain.on('close-window', () =>{
+    mainWindow.close()
+    windows.forEach( w => w.close())
 })
 
 ipcMain.on("print-content", (event, content) => {

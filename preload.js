@@ -9,4 +9,5 @@ contextBridge.exposeInMainWorld("electronAPI", {
     updateCustomerDisplay: content => ipcRenderer.send(`update-display`, content),
     reloadWindow: () => ipcRenderer.send('reload',null),
     getPrinters: () => ipcRenderer.invoke("get-printers"),
+    closeApp: () => ipcRenderer.send("close-window"),
 });

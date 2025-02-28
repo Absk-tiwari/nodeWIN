@@ -35,11 +35,6 @@
     "electron-builder": "^25.1.8"
   },
   "dependencies": {
-    "bwip-js": "^4.5.1",
-    "escpos": "^3.0.0-alpha.6",
-    "escpos-usb": "^3.0.0-alpha.4",
-    "puppeteer": "^24.2.1",
-    "sharp": "^0.33.5",
-    "usb": "^2.14.0"
+    "bwip-js": "^4.5.1"
   }
 }
