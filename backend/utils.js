@@ -57,19 +57,22 @@ async function generatePdf(data){
                             <div class="row mt-2 chosen-product">
                                 <table style="width: 100%; border-bottom:1px dashed gray;">
                                     <tbody>
-                                        <tr><td><b>Opening Cash</b>:</td><td></td><td>${data.register.open}</td></tr>
-                                        <tr><td><b>Closing Cash</b>:</td><td></td><td>${data.register.close}</td></tr>
+                                        ${data.register? 
+                                           `<tr><td><b>Opening Cash</b>:</td><td></td><td>${data.register.open}</td></tr>
+                                            <tr><td><b>Closing Cash</b>:</td><td></td><td>${data.register.close}</td></tr>`
+                                        :``}
                                         <tr><td><b>Report Date</b>:</td><td></td><td>${new Date().toLocaleDateString()}</td></tr>
                                         <tr><td><b>Report Time</b>:</td><td></td><td>${new Date().toLocaleTimeString()}</td></tr>
                                         <tr><td><b>Transactions</b>:</td><td></td><td>${data.number_of_transactions}</td></tr>
                                         <tr><td><b>Total Products</b>:</td><td></td><td>${data.total_products}</td></tr>
-                                        <tr><td><b>Returns</b>:</td><td></td><td>${data.currency}${data.return_amount}</td></tr>
-                                        <tr><td><b>Cash</b>:</td><td></td><td>${data.currency}${data.cash.toFixed(2)}</td></tr>
-                                        <tr><td><b>Card</b>:</td><td></td><td>${data.currency}${data.card.toFixed(2)}</td></tr>
-                                        <tr><td><b>Account</b>:</td><td></td><td>${data.currency}${data.account.toFixed(2)}</td></tr>
-                                        <tr><td><b>Taxed Amount</b>:</td><td></td><td>${data.currency}${data.total_tax.toFixed(2)}</td></tr>
+                                        <tr><td><b>Returns</b>:</td><td></td><td>${data.return_amount < 0 ? '-'+data.currency+Math.abs(data.return_amount): data.currency+ data.return_amount}</td></tr>
+                                        <tr><td><b>Discounts</b>:</td><td></td><td>${data.currency}${data.discounts < 0? 0.00: data.discounts.toFixed(2)}</td></tr>
+                                        <tr><td><b>Cash Payments</b>:</td><td></td><td>${data.currency}${data.cash.toFixed(2)}</td></tr>
+                                        <tr><td><b>Card Payments</b>:</td><td></td><td>${data.currency}${data.card.toFixed(2)}</td></tr>
+                                        <tr><td><b>Account Payments</b>:</td><td></td><td>${data.currency}${data.account.toFixed(2)}</td></tr>
+                                        <tr><td><b>Tax</b>:</td><td></td><td>${data.currency}${data.total_tax.toFixed(2)}</td></tr>
                                         <tr style="border-top:1px dashed gray">
-                                            <td><h3>Taxes</h3></td>
+                                            <td><b>Included Taxes</b></td>
                                         </tr>
                                         ${Object.entries(data.taxes).map(([type, value]) => `
                                         <tr>
