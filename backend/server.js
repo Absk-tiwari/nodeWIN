@@ -45,6 +45,14 @@ app.get("/", (r, res) => res.send("Something went wrong!"));
 let server
 function start(){
   server = app.listen(port)
+  server.on("error", (err) => {
+      if (err.code === "EADDRINUSE") {
+        console.error(`❌ Port ${port} is already in use.`);
+        process.exit(1); // Exit the process
+      } else {
+        console.error("Server error:", err);
+      }
+});
 }
 
 function stop(){
