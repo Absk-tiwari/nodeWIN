@@ -16,7 +16,6 @@ router.get('/products/:img',  async(req, res) => {
         'price',
         'code',
         'category_id',
-        'weight',
         'sales_desc',
         'tax',
         'quantity'

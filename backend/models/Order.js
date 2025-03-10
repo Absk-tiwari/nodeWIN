@@ -1,4 +1,5 @@
 const { Model } = require('objection');
+const CashRegister = require('./CashRegister');
 
 class Order extends Model {
 
@@ -36,6 +37,14 @@ class Order extends Model {
                     to: 'cashier_sessions.cash_register_id'
                 }
             },
+            register: {
+                relation : Model.BelongsToOneRelation,
+                modelClass: CashRegister,
+                join: {
+                    from: 'orders.cash_register_id',
+                    to: "cash_register.id"
+                }
+            }
         };
     }
 }

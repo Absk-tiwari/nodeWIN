@@ -10,6 +10,17 @@ let output = { status : true }
   
 router.get('/', async (req,res) => {
     try {  
+        let taxes = await Tax.query().where('status', true);
+        return res.json({status:true, taxes });
+    } catch (e) {
+        console.log("exception occured: ",e)
+        error.message = e.message
+        return res.status(400).json(error)        
+    }
+});
+
+router.get('/list', async (req,res) => {
+    try {  
         let taxes = await Tax.query();
         return res.json({status:true, taxes });
     } catch (e) {
@@ -56,7 +67,7 @@ router.post('/update', fetchuser, async(req, res) =>{
 
 router.get('/remove/:id', fetchuser, async(req, res) =>{
     try { 
-        const taxDeleted = await Category.query().deleteById(req.params.id);
+        const taxDeleted = await Tax.query().deleteById(req.params.id);
         if(taxDeleted) {
             return res.json({status:true, taxDeleted}); 
         } else {
@@ -67,5 +78,16 @@ router.get('/remove/:id', fetchuser, async(req, res) =>{
         return res.status(500).json(error)     
     }
 }); 
+
+router.get('/toggle/:id/:status', async (req,res) => {
+    try { 
+        const tax = await Tax.query().patchAndFetchById(req.params.id, {
+            status: req.params.status
+        }); 
+        return res.json({status:true, tax, message: "Status updated!" });
+    } catch (error) {
+        return res.json({ status:false, tax:{}, message: error.message, message: "Something went wrong!" })   
+    }
+})
 
 module.exports=router 

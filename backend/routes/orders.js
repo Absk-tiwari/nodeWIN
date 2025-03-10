@@ -15,9 +15,8 @@ const path = require('path');
 const pdf = require('html-pdf');
 const fs = require('fs');
 const { generatePdf } = require('../utils');
-const e = require("express");
 
-const imgPath = path.join(__dirname,'../client/build/static/media/pos.5e6faa254498748a41be.png')
+const imgPath = path.join(__dirname,'../client/build/static/media/logo.2d2e09f65e21f53b1f9f.png')
 
 const b64 = fs.readFileSync(imgPath, 'base64');
 
@@ -26,7 +25,7 @@ let error = { status : false, message:'Something went wrong!' }
 router.get('/', fetchuser , async(req, res) => {
 
     const orders = Order.query()
-    .withGraphFetched('[customer(selectName), cashier(selectName), session]')
+    .withGraphFetched('[cashier(selectName), session, register]')
     .modifiers({
       selectName(build) {
         build.select('id', 'name');
@@ -46,13 +45,10 @@ router.get('/', fetchuser , async(req, res) => {
 router.post('/create', fetchuser, async(req, res) => 
 { 
     try {
-        // Create the order
         const notifications = [];
         const order = await Order.query().insert({
             session_id: req.body.session_id,
             amount: req.body.amount,
-            ref_no: Math.floor(100000000000 + Math.random() * 899999999999),
-            customer_id: req.body.customer_id?? 0,
             payment_mode: req.body.payment_mode,
             transaction_type: req.body.transaction_type,
             cashier_id: req.body.myID,
@@ -80,15 +76,9 @@ router.post('/create', fetchuser, async(req, res) =>
                 data: modes,
             });
 
-            if(order.transaction_type==='credit') {
-                await CashRegister.query().findById( req.body.cash_register_id ).patch({
-                    closing_cash: CashRegister.raw(`closing_cash + ?`, [ req.body.cashForDrawer ])
-                });
-            } else {
-                await CashRegister.query().findById( req.body.cash_register_id ).patch({
-                    closing_cash: CashRegister.raw(`closing_cash - ?`, [ req.body.amount ])
-                });
-            }
+            await CashRegister.query().findById( req.body.cash_register_id ).patch({
+                closing_cash: CashRegister.raw(`closing_cash + ?`, [ req.body.cashForDrawer ])
+            });
             const sessionData = req.body.sessionData;
             const minStock = await Setting.query().where('user_id', req.body.myID )
             .where('key', 'STOCK_ALERT')
@@ -102,7 +92,8 @@ router.post('/create', fetchuser, async(req, res) =>
                 if (productId === 'quick') continue;
                 // decrement product stock if the inventory is on 
                 if(!INVENTORY_IS || INVENTORY_IS.value ==='true') { // INVENTORY_IS.value == true
-                    if(order.transaction_type==='credit') {
+                    console.log(sessionData.price[productId])
+                    if( sessionData.price[productId] > 0 ) {
                         await Product.query().findById(productId).patch({
                             quantity: Product.raw('quantity - ?', [stock]),
                         });
@@ -222,9 +213,9 @@ router.post(`/x-report`, fetchuser, async(req,res) => {
     {
         const payload = req.body;
         const {status, message, html} = await generateReport({...payload, type:'X'})
-        res.json({ status, message, html });
+        return res.json({ status, message, html });
     } catch (error) {
-        res.json({status:false, message:error.message});
+        return res.json({status:false, message:error.message});
     }
 });
 
@@ -248,51 +239,43 @@ router.post(`/z-report`, fetchuser, async(req,res) => {
 
 async function generateReport(payload) {
 
-    let totalProducts = 0, total = 0, returns = 0, tax = 0, cash = 0, card = 0, account = 0;
+    let totalProducts = 0, total = 0, returns = 0, tax = 0, cash = 0, card = 0, account = 0, discounts = 0;
     let customers = [];
-    let categories = { 'Others': 0 };
+    let categories = {};
     let Rtype = payload.type;
 
     let orders;
-    if (payload.today) {
-        const today = (new Date().toISOString()).split('T')[0];
+    if (payload.today || Rtype==='Z') {
         if(payload.register_id){
             orders = await Order.query()
                 .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-                .where(raw('STRFTIME("%Y-%m-%d",created_at)'), today)
                 .where('cs.cash_register_id', payload.register_id)
-                .select('*');
-        } else {
-            orders = await Order.query()
-                .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-                .where(raw('STRFTIME("%Y-%m-%d",created_at)'), today)
                 .select('*');
         }
     } else {
         orders = await Order.query()
-            .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
-            .whereBetween(raw('STRFTIME("%Y-%m-d%",created_at)'), [payload.from, payload.to ? payload.to: today])
-            .select('*');
+        .join('cashier_sessions as cs', 'orders.id', 'cs.order_id')
+        .whereBetween(raw('STRFTIME("%Y-%m-%d",created_at)'), [payload.from, payload.to ? payload.to: today])
+        .select('*'); // x-report always
     }
     let taxes = {}, qt = {};
     for (const order of orders) {
         let orderData = JSON.parse(order.data);
         if (!customers.includes(order.customer_id) && order.customer_id) customers.push(order.customer_id);
-        if(order.transaction_type==='credit') 
-        {
+        // if(order.transaction_type==='credit') 
+        // {
             let products = Array.from(new Set(orderData.products));
             total += orderData.total;
             let QT = orderData.quantity;
             let quickProduct = orderData.otherAmount || null;
             const sPrice = orderData.price || null
-    
+
             for (const id of products) {
                 if (id === 'quick') {
-                    categories['Others'] += parseFloat(quickProduct);
+                    categories['Others'] = categories['Others'] ? categories['Others'] + parseFloat(quickProduct): parseFloat(quickProduct);
                     qt['Others'] = (parseFloat(qt['Others']) || 0) + QT[id];
                     continue;
                 }
-    
                 let product = await Product.query()
                     .withGraphFetched('category')
                     .findById(id)
@@ -304,7 +287,7 @@ async function generateReport(payload) {
                 }
     
                 if (!product?.category) {
-                    categories['Others'] += product.price * QT[id];
+                    categories['Others'] = categories['Others'] ? categories['Others'] + ((sPrice[id]??product.price) * QT[id]): ((sPrice[id]??product.price) * QT[id]);
                     qt['Others'] = (parseFloat(qt['Others']) || 0) + QT[id];
                 } else {
                     categories[product.category.name] = (categories[product.category.name] || 0) + (sPrice?.[id]??product.price * QT[id]);
@@ -316,10 +299,11 @@ async function generateReport(payload) {
     
             let finalTax = await Product.query()
                 .whereIn('id', products)
-                .select(['tax','price']);
+                .select(['tax','price','id']);
     
-            let thisTax = finalTax.reduce((sum, item) => sum + (parseFloat(item.tax) / 100 * parseFloat(item.price)), 0);
+            let thisTax = finalTax.reduce((sum, item) => sum + (parseFloat(item.tax) / 100 * parseFloat(sPrice[item.id]??item.price)), 0);
             if(!isNaN(thisTax)) tax += thisTax;
+            discounts += finalTax.reduce((a,b) => a + (sPrice[b.id] - b.price),0)
             if (order.payment_mode === 'Cash') {
                 cash += orderData.total;
             } else if (order.payment_mode === 'Card') {
@@ -333,14 +317,14 @@ async function generateReport(payload) {
                     account+= parseFloat(orderData.modes.Account).toFixed(2)
                 }
             }
-        } else {
-            returns += orderData.total
-        }
+        // } else {
+            returns += Object.values(orderData.price).filter( _ => _ < 0 ).reduce((a,c)=> a + c,0)
+        // }
 
     }
     let me = await User.query().where('id', payload.myID ).first();
     let registerCash = await CashRegister.query().where('id', payload.register_id??0 ).first();
-    if(!registerCash) throw new Error("Z-report generated already!")
+    if(!registerCash && Rtype==='Z') throw new Error("Z-report generated already!")
     // now we have the meta-data
     let data = {
         total_products: totalProducts,
@@ -351,7 +335,7 @@ async function generateReport(payload) {
         cash: parseFloat(cash),
         card: parseFloat(card),
         account: parseFloat(account),
-        discounts: 0.00,
+        discounts,
         number_of_transactions: orders.length,
         categories,
         taxes,
@@ -360,13 +344,15 @@ async function generateReport(payload) {
         print: false,
         currency: payload.currency,
         userName: me.name,
-        b64,
-        register:{
-            open: registerCash?.opening_cash??0 ,
-            close: payload.currency+ registerCash.closing_cash??0
-        }
+        b64
     };
-
+    if(registerCash) {
+        data.register = {
+            open: registerCash?.opening_cash??0 ,
+            close: payload.currency + registerCash.closing_cash??0
+        }
+    }
+    // return data
     let view = await generatePdf(data); // Pass data to a template renderer
     const options = { format: 'A4' };
 

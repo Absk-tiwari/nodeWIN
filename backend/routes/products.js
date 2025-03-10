@@ -24,7 +24,6 @@ router.get('/', async (req,res) => {
             'name',
             'price',
             'code',
-            'weight',
             'tax',
             'sales_desc',
             'image',
@@ -149,7 +148,6 @@ router.post('/import', [ upload.single('file'), fetchuser ], async(req, res) => 
             await Product.query().insertGraph({
                 code: row.Barcode,
                 name: row.Name,
-                type: row['Product Type'],
                 price: row['Sales Price'],
                 sales_desc: row['Sales Description'],
                 image: path,  // Use the uploaded path or the default image from Excel
@@ -378,7 +376,7 @@ router.post('/sync', [ upload.single('file'), fetchuser ], async(req, res) => {
                     let category
                     if(row.category) {
                         catName = normalizeSpaces(row.category)
-                        category = await ProductCategory.query().findOne({ name: catName });
+                        category = await ProductCategory.query().where('name', catName).first();
                         if (!category) {
                             category = await ProductCategory.query().insert({ name: catName });
                         }
@@ -397,7 +395,6 @@ router.post('/sync', [ upload.single('file'), fetchuser ], async(req, res) => {
                             await Product.query().insertGraph({
                                 code: row.barCode??null,
                                 name: row.name,
-                                type: null,
                                 price: (row.price)?.replace(",", ".")??0,
                                 sales_desc: null,
                                 image: null,
@@ -410,7 +407,6 @@ router.post('/sync', [ upload.single('file'), fetchuser ], async(req, res) => {
                         await Product.query().insertGraph({
                             code: row.barCode??null,
                             name: row.name,
-                            type: null,
                             price: (row.price)?.replace(",", ".")??0,
                             sales_desc: null,
                             image: null,
