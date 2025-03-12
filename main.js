@@ -69,7 +69,7 @@ app.on('ready', () =>
 
 const openDrawer = async () => {
     const printWindow = new BrowserWindow({ show: false });
-    const html = `<html><body><style>@page{size:auto;margin:0mm;height:1px}</style></body></html>`;
+    const html = `<html><body><style>@page{size:auto;margin:-5mm 3mm 3mm 2mm;}</style></body></html>`;
   
     printWindow.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`);
     printWindow.webContents.on("did-finish-load", () => {
@@ -108,18 +108,17 @@ ipcMain.on('close-window', () => {
 
 ipcMain.on("print-content", (event, content) => {
     const printWindow = new BrowserWindow({ show: false });
-    const html = `<html><style> @page{ size:auto; margin:-5mm 3mm 3mm 2mm; }
-        *{font-weight:400!important;text-transform:uppercase}
+    const html = `<html><style> @page{ size:auto; margin:-5mm 3mm 3mm 2mm }
+        *{font-weight:400!important;text-transform:uppercase;font-size:0.85rem!important;font-family:system-ui!important}
+        .toShow{display:inline!important;}
         .row> * {
             flex-shrink: 0;
             max-width:100%;
-            padding-right:calc(30px * .5);
             padding-left:0;
             align-items:center;
             margin-top:0;
         }
-        .row{padding:0px 10px!important;min-height:10px!important;border:0px!important}
-        .row p:nth-child(2){margin-bottom:1px!important}
+        .row{padding:0px!important;min-height:10px!important;border:0px!important}
         .receipt {border-top:1px dashed!important;border-bottom:1px dashed!important}
         .toHide {display:none!important}
      </style>
